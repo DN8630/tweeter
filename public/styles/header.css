@@ -1,0 +1,18 @@
+header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #9e6900;
+  background-image: url("https://www.transparenttextures.com/patterns/graphcoders-lil-fiber.png");
+
+}
+.name{
+ color: azure;
+ justify-content: center;
+}
+.not-bold {
+  font-weight: normal;
+}
