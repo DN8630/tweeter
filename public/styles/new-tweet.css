@@ -2,6 +2,7 @@
 .new-tweet {
   display: flex;
   flex-direction: column;
+
 }
 .new-tweet form {
   display: flex;
@@ -38,4 +39,7 @@
   margin-top: 0em;
   font-weight: 700;
   padding: 14px;
+}
+.red {
+  color: red;
 }
