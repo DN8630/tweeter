@@ -5,9 +5,22 @@
  */
 $(document).ready(function() {
   //Render Dynamic Tweets
-  renderTweets(data);
+  // renderTweets(data);
 
   // Form Submission using jQuery
   $('form').submit(createTweet);
+
+  // Function to load tweets
+  const loadTweets = function() {
+    $.ajax({
+      url: '/tweets',
+      method: 'GET'
+    }).then((tweets) => {
+      console.log(tweets);
+      renderTweets(tweets);
+    });
+  };
+  loadTweets();
+
 
 });
