@@ -22,5 +22,12 @@ nav div {
   align-items: center;
 }
 .fa-angle-double-down {
-color: red;
+  color: red;
+  position: relative;
+  transition: top 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  top: 0;
+}
+.navigator:hover .fa-angle-double-down {
+
+  top: 15px;
 }
