@@ -1,14 +1,26 @@
 nav {
   height: 120px;
-  width: auto;
+  width: 100%;
   background-color: #4056A1;
   color: #ffffff;
   padding: 1.5em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  /* Keeping the navigation bar fixed */
+  position: fixed;
+  top: 0;
 }
 .tweeter-font {
   font-family: 'Bungee';
   font-size: 30px;
+}
+nav div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fa-angle-double-down {
+color: red;
 }

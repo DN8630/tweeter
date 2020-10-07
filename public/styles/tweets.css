@@ -20,6 +20,7 @@
   height: 100px;
   padding: 0.5em;
   background: transparent;
+  margin-top: 0;
 }
 .tweets > header > div {
   display: flex;
