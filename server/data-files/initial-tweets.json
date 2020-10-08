@@ -2,7 +2,7 @@
   {
     "user": {
       "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
+      "avatars": "images/img_avatar.png"
       ,
       "handle": "@SirIsaac"
     },
@@ -14,7 +14,7 @@
   {
     "user": {
       "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "avatars": "images/img_avatar.png",
       "handle": "@rd" },
     "content": {
       "text": "Je pense , donc je suis"

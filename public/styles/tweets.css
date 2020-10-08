@@ -30,6 +30,8 @@
 }
 .tweet > p {
   margin: 0.5em;
+  word-wrap: break-word;
+  
 }
 .handle {
   color: darkgrey;

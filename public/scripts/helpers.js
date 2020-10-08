@@ -4,7 +4,7 @@ const createTweetElement = function(tweetData) {
   output += `<article class="tweet">`;
   output += `<header>`;
   output += ` <div>`;
-  output += `<img src="images/img_avatar.png" class="avatar">`;
+  output += `<img src="${tweetData["user"]["avatars"]}" class="avatar">`;
   output += `<h4> <span class="not-bold">${tweetData["user"]["name"]}</span></h4>`;
   output += `</div>`;
   output += `<span class="handle">${tweetData["user"]["handle"]}</span>`
@@ -40,11 +40,25 @@ const createTweet = function(event) {
   let $input = $form.find('#tweet-text');
   let $tweetContent = $input.val();
   const serializedData = $input.serialize();
-  $.ajax({
-    url: '/tweets/',
-    method: 'POST',
-    data: serializedData
-  })
+  if ($tweetContent === "" || $tweetContent === null) {
+    alert("Please enter a Tweet.");
+    console.log("After alert in empty");
+    return;
+  } else if ($tweetContent.length > 140) {
+    alert("The tweet is too long. Please limit to 140 characters");
+    return;
+  } else {
+    $.ajax({
+      url: '/tweets/',
+      method: 'POST',
+      data: serializedData
+    }).then(() => {
+      loadTweets();
+      this.reset();
+      $('.counter').text("140");
+    });
+  }
+
   
 };
 

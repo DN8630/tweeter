@@ -11,15 +11,7 @@ $(document).ready(function() {
   $('form').submit(createTweet);
 
   // Function to load tweets
-  const loadTweets = function() {
-    $.ajax({
-      url: '/tweets',
-      method: 'GET'
-    }).then((tweets) => {
-      console.log(tweets);
-      renderTweets(tweets);
-    });
-  };
+
   loadTweets();
 
 
