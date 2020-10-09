@@ -1,0 +1,33 @@
+/* Responsive design for devices */
+@media only screen and (max-width: 768px) {
+  nav {
+     background-color: transparent;
+   }
+   body > header {
+     margin: 0;
+   }
+}
+ 
+  @media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+
+  }
+  body > header {
+    width: 50%;
+    height: 50%;
+    margin-left: 2em;
+    margin-right: 0.5em;
+    margin-top: 10em;
+    
+  }
+   .container {
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 8em;
+    width: 50%;
+  }
+
+}
