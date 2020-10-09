@@ -5,8 +5,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #9e6900;
-  background-color: rgb(216, 132, 7);
+  background-color: #ee700afd;
   background-image: url("https://www.transparenttextures.com/patterns/graphcoders-lil-fiber.png");
   /* Adjusting header for fixed navigation bar */
   margin-top: 120px;
