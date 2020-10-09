@@ -8,6 +8,9 @@ $(document).ready(function() {
     let len = $input.val().length;
     const max = 140;
     let remainingChars = max - len;
+    if (remainingChars > 0) {
+      $('.error').addClass("hidden");
+    }
     $counter.text(remainingChars);
     if (remainingChars < 0) {
       $counter.addClass('red');

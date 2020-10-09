@@ -4,6 +4,7 @@
   flex-direction: column;
 
 }
+
 .new-tweet form {
   display: flex;
   flex-direction: column;
@@ -42,4 +43,14 @@
 }
 .red {
   color: red;
+}
+.error {
+color: red;
+font-weight: 500;
+border: 2px solid red ;
+padding: 0.5em;
+margin-top : 1em;
+}
+.hidden {
+  display: none;
 }

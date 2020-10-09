@@ -9,9 +9,9 @@ const createTweetElement = function(tweetData) {
   output += `</div>`;
   output += `<span class="handle">${tweetData["user"]["handle"]}</span>`
   output += `</header>`;
-  output += `<p>${tweetData["content"]["text"]}</p>`;
+  output += `<p>${escape(tweetData["content"]["text"])}</p>`;
   output += `<footer>`
-  output += `<span>${tweetData["created_at"]}</span>`;
+  output += `<span>${moment(tweetData["created_at"]).fromNow()}</span>`;
   output += `<div>`;
   output += `<i class="fas fa-flag"></i>`;
   output += `<i class="fas fa-retweet"></i>`;
@@ -32,6 +32,11 @@ const renderTweets = function(tweets) {
   }  
 };
 
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 
 // Form submission using jQuery
 const createTweet = function(event) {
@@ -40,26 +45,30 @@ const createTweet = function(event) {
   let $input = $form.find('#tweet-text');
   let $tweetContent = $input.val();
   const serializedData = $input.serialize();
+  $('.error').hide(); 
   if ($tweetContent === "" || $tweetContent === null) {
-    alert("Please enter a Tweet.");
-    console.log("After alert in empty");
+    $('.error').removeClass("hidden");
+    $('.error').slideDown(500); 
+    $('.error').children('span').text("Please enter a tweet");    
     return;
   } else if ($tweetContent.length > 140) {
-    alert("The tweet is too long. Please limit to 140 characters");
+    $('.error').slideDown(500);  
+    $('.error').removeClass("hidden");
+    $('.error').children('span').text("The tweet is too long. Please limit to 140 characters");
     return;
   } else {
+    $('.error').addClass("hidden");
     $.ajax({
       url: '/tweets/',
       method: 'POST',
       data: serializedData
     }).then(() => {
+      $('.tweets-container').empty();
       loadTweets();
       this.reset();
       $('.counter').text("140");
     });
   }
-
-  
 };
 
 const loadTweets = function() {
