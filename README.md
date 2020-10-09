@@ -3,8 +3,13 @@
 Tweeter is a simple, single-page Twitter clone.
 ## Final Product
 
+### Compose Tweet
 !["Compose Tweet"](https://github.com/DN8630/tweeter/blob/master/public/docs/tweet-box.png?raw=true)
+
+### Mobile View
 !["Mobile View](https://github.com/DN8630/tweeter/blob/master/public/docs/Mobile-view.png?raw=true)
+
+### Tweets
 !["Tweets"](https://github.com/DN8630/tweeter/blob/master/public/docs/tweets.png?raw=true)
 
 
