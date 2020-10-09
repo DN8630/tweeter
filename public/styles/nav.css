@@ -10,6 +10,7 @@ nav {
   /* Keeping the navigation bar fixed */
   position: fixed;
   top: 0;
+  z-index: 1;
 }
 .tweeter-font {
   font-family: 'Bungee';

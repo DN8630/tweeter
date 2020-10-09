@@ -10,6 +10,7 @@ header {
   background-image: url("https://www.transparenttextures.com/patterns/graphcoders-lil-fiber.png");
   /* Adjusting header for fixed navigation bar */
   margin-top: 120px;
+  z-index: 0;
 }
 .name{
  color: azure;
